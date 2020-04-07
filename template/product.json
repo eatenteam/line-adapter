@@ -1,0 +1,123 @@
+{
+  "type": "flex",
+  "altText": "Flex Message",
+  "contents": {
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "flex": 0,
+      "contents": [
+        {
+          "type": "box",
+          "layout": "baseline",
+          "contents": [
+            {
+              "type": "text",
+              "text": "PAUL @PARAGON",
+              "align": "start",
+              "weight": "bold",
+              "color": "#392F5A"
+            }
+          ]
+        }
+      ]
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "md",
+      "action": {
+        "type": "uri",
+        "label": "Action",
+        "uri": "https://linecorp.com"
+      },
+      "contents": [
+        {
+          "type": "text",
+          "text": "Lemon Tart",
+          "size": "xl",
+          "weight": "bold",
+          "color": "#FFF8F0"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "baseline",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Original:",
+                  "flex": 2,
+                  "weight": "bold",
+                  "color": "#FFF8F0"
+                },
+                {
+                  "type": "text",
+                  "text": "THB150",
+                  "flex": 4,
+                  "align": "end",
+                  "color": "#FFF8F0"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "baseline",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Now:",
+                  "flex": 2,
+                  "weight": "bold",
+                  "color": "#FFF8F0"
+                },
+                {
+                  "type": "text",
+                  "text": "THB90",
+                  "flex": 4,
+                  "align": "end",
+                  "color": "#FFF8F0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "button",
+          "action": {
+            "type": "postback",
+            "label": "Add to Basket",
+            "text": "Add to Basket",
+            "data": "{id}"
+          },
+          "color": "#FFF8F0",
+          "style": "secondary"
+        }
+      ]
+    },
+    "styles": {
+      "header": {
+        "backgroundColor": "#FFF8F0"
+      },
+      "body": {
+        "backgroundColor": "#392F5A"
+      },
+      "footer": {
+        "backgroundColor": "#392F5A"
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "type": "flex",
+  "altText": "Flex Message",
+  "contents": {
+    "type": "bubble",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "@PARAGON",
+          "align": "start",
+          "weight": "bold",
+          "color": "#392F5A"
+        }
+      ]
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "md",
+      "action": {
+        "type": "uri",
+        "label": "Action",
+        "uri": "https://linecorp.com"
+      },
+      "contents": [
+        {
+          "type": "text",
+          "text": "🍰  Paul Patisserie ",
+          "size": "xl",
+          "weight": "bold",
+          "color": "#FFF8F0"
+        },
+        {
+          "type": "text",
+          "text": "Up to 70% Sale",
+          "weight": "bold",
+          "color": "#ED2939"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "baseline",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Popular",
+                  "flex": 2,
+                  "weight": "bold",
+                  "color": "#FFF8F0"
+                },
+                {
+                  "type": "text",
+                  "text": "Lemon tart, strawberry shortcake, and  bakeries",
+                  "flex": 4,
+                  "color": "#FFF8F0",
+                  "wrap": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "baseline",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Open",
+                  "flex": 2,
+                  "weight": "bold",
+                  "color": "#FFF8F0"
+                },
+                {
+                  "type": "text",
+                  "text": "10:00AM",
+                  "flex": 4,
+                  "color": "#FFF8F0"
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "baseline",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Close ",
+                  "flex": 2,
+                  "weight": "bold",
+                  "color": "#FFF8F0"
+                },
+                {
+                  "type": "text",
+                  "text": "07:00PM",
+                  "flex": 4,
+                  "color": "#FFF8F0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "spacer",
+          "size": "xxl"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "postback",
+            "label": "View Menu",
+            "text": "View Menu",
+            "data": "{id}"
+          },
+          "color": "#FFF8F0",
+          "style": "secondary"
+        }
+      ]
+    },
+    "styles": {
+      "header": {
+        "backgroundColor": "#FFF8F0"
+      },
+      "body": {
+        "backgroundColor": "#392F5A"
+      },
+      "footer": {
+        "backgroundColor": "#392F5A"
+      }
+    }
+  }
+}

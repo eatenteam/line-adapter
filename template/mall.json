@@ -1,0 +1,71 @@
+{
+  "type": "flex",
+  "altText": "Flex Message",
+  "contents": {
+    "type": "bubble",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "md",
+      "action": {
+        "type": "uri",
+        "label": "Action",
+        "uri": "https://linecorp.com"
+      },
+      "contents": [
+        {
+          "type": "text",
+          "text": "🛍️ Paragon",
+          "size": "xl",
+          "weight": "bold",
+          "color": "#FFF8F0"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "type": "text",
+          "text": "Paul, BreadTalk, Flavor Field, Starbuck, and many more!",
+          "size": "md",
+          "color": "#FFF8F0",
+          "wrap": true
+        },
+        {
+          "type": "text",
+          "text": "Delivery Time: 8:00PM",
+          "weight": "bold",
+          "color": "#FFF8F0"
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "spacer",
+          "size": "xxl"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "postback",
+            "label": "See Restaurants",
+            "text": "See Restaurants",
+            "data": "{id}"
+          },
+          "color": "#FFF8F0",
+          "style": "secondary"
+        }
+      ]
+    },
+    "styles": {
+      "body": {
+        "backgroundColor": "#392F5A"
+      },
+      "footer": {
+        "backgroundColor": "#392F5A"
+      }
+    }
+  }
+}

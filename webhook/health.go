@@ -7,7 +7,7 @@ import (
 
 func (s *Server) handleHealthCheck() http.HandlerFunc {
     return func(w http.ResponseWriter, r *http.Request) {
-        respondWithCode(w, r, http.StatusOK)
+        respond(w, r, http.StatusOK, nil)
         log.Println("🌡️  Healthcheck passed")
         return
     }
