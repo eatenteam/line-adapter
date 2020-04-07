@@ -30,6 +30,9 @@ func (s *Server) handleText(m *linebot.TextMessage, rt string, _ *linebot.EventS
     }
     bubble := paragon.createBubble()
     message := linebot.NewFlexMessage("Mall", bubble)
-    s.bot.ReplyMessage(rt, message)
+    _, err := s.bot.ReplyMessage(rt, message).Do()
+    if err != nil {
+      return err
+    }
     return nil
 }
