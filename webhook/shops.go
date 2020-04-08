@@ -7,6 +7,7 @@ type Shop struct {
     Brand       string      `json:"brand"`
     Promo       string      `json:"promo"`
     Description string      `json:"description"`
+    Location    Location    `json:"location"`
     Stock       []Stock     `json:"stock"`
     Open        string      `json:"open"`
     Close       string      `json:"close"`
@@ -17,6 +18,11 @@ type Stock struct {
     Quantity    int         `json:"quantity"`
 }
 
+type Location struct {
+    Mall        string      `json:"mall"`
+    Address     string      `json:"addr"`
+}
+
 func (s *Shop) createBubble(txt string) *linebot.BubbleContainer {
     postback := &linebot.PostbackAction{
         Label:          "View Menu",
@@ -24,7 +30,7 @@ func (s *Shop) createBubble(txt string) *linebot.BubbleContainer {
         DisplayText:    s.Brand,
     }
     header := []linebot.FlexComponent{
-        bubbleTextHeader("@" + txt),
+        bubbleTextHeader(txt),
     }
     body := []linebot.FlexComponent{
         bubbleTextTitle("🍰 " + s.Brand),
@@ -44,12 +50,11 @@ func (s *Shop) createBubble(txt string) *linebot.BubbleContainer {
         }...),
     }
     footer := []linebot.FlexComponent{
-        bubbleSpacer(),
         bubbleButton(postback),
     }
     return &linebot.BubbleContainer{
         Type:   linebot.FlexContainerTypeBubble,
-        Size:   linebot.FlexBubbleSizeTypeGiga,
+        Size:   linebot.FlexBubbleSizeTypeMega,
         Header: bubbleBoxHeader(header...),
         Body:   bubbleBoxBody(body...),
         Footer: bubbleBoxFooter(footer...),
