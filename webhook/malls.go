@@ -26,9 +26,9 @@ func (m *Mall) createBubble() linebot.FlexContainer {
     }
     return &linebot.BubbleContainer{
         Type:   linebot.FlexContainerTypeBubble,
-        Size:   linebot.FlexBubbleSizeTypeMega,
+        Size:   linebot.FlexBubbleSizeTypeKilo,
         Body:   bubbleBoxBody(body...),
-        Footer: bubbleBoxHorizontal(footer...),
+        Footer: bubbleBoxFooter(footer...),
         Styles: bubbleStyleDefault(),
     }
 }

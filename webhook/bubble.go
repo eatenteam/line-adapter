@@ -38,6 +38,11 @@ func bubbleBoxBody(contents ...linebot.FlexComponent) *linebot.BoxComponent {
     return &body
 }
 
+func bubbleBoxFooter(contents ...linebot.FlexComponent) *linebot.BoxComponent {
+    footer := *bubbleBoxVetfical(contents...)
+    return &footer
+}
+
 func bubbleButton(action linebot.TemplateAction) *linebot.ButtonComponent {
     return &linebot.ButtonComponent{
         Type:   linebot.FlexComponentTypeButton,
