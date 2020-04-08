@@ -27,11 +27,11 @@ func (p *Product) createBubble(txt string) *linebot.BubbleContainer {
         bubbleSeparator(),
         bubbleBoxBaseline([]linebot.FlexComponent{
             bubbleTextBodyBold("Original:", 2),
-            bubbleTextBodyRegular(strconv.Itoa(p.OriginalPrice), 4),
+            bubbleTextBodyRegular("THB" + strconv.Itoa(p.OriginalPrice), 4),
         }...),
         bubbleBoxBaseline([]linebot.FlexComponent{
             bubbleTextBodyBold("Now:", 2),
-            bubbleTextBodyRegular(strconv.Itoa(p.PromotionPrice), 4),
+            bubbleTextBodyRegular("THB" + strconv.Itoa(p.PromotionPrice), 4),
         }...),
     }
     footer := []linebot.FlexComponent{
