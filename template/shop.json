@@ -10,7 +10,6 @@
         {
           "type": "text",
           "text": "@PARAGON",
-          "align": "start",
           "weight": "bold",
           "color": "#392F5A"
         }
@@ -44,27 +43,21 @@
         },
         {
           "type": "box",
-          "layout": "vertical",
+          "layout": "baseline",
           "contents": [
             {
-              "type": "box",
-              "layout": "baseline",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "Popular",
-                  "flex": 2,
-                  "weight": "bold",
-                  "color": "#FFF8F0"
-                },
-                {
-                  "type": "text",
-                  "text": "Lemon tart, strawberry shortcake, and  bakeries",
-                  "flex": 4,
-                  "color": "#FFF8F0",
-                  "wrap": true
-                }
-              ]
+              "type": "text",
+              "text": "Popular",
+              "flex": 2,
+              "weight": "bold",
+              "color": "#FFF8F0"
+            },
+            {
+              "type": "text",
+              "text": "Lemon tart, strawberry shortcake, and  bakeries",
+              "flex": 4,
+              "color": "#FFF8F0",
+              "wrap": true
             }
           ]
         },

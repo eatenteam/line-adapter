@@ -16,6 +16,14 @@ func bubbleStyleDefault() *linebot.BubbleStyle {
     }
 }
 
+func bubbleBoxBaseline(contents ...linebot.FlexComponent) *linebot.BoxComponent {
+    return &linebot.BoxComponent{
+        Type:       linebot.FlexComponentTypeBox,
+        Layout:     linebot.FlexBoxLayoutTypeBaseline,
+        Contents:   contents,
+    }
+}
+
 func bubbleBoxVertical(contents ...linebot.FlexComponent) *linebot.BoxComponent {
     return &linebot.BoxComponent{
         Type:       linebot.FlexComponentTypeBox,
@@ -30,6 +38,11 @@ func bubbleBoxHorizontal(contents ...linebot.FlexComponent) *linebot.BoxComponen
         Layout:     linebot.FlexBoxLayoutTypeHorizontal,
         Contents:   contents,
     }
+}
+
+func bubbleBoxHeader(contents ...linebot.FlexComponent) *linebot.BoxComponent {
+    header := *bubbleBoxVertical(contents...)
+    return &header
 }
 
 func bubbleBoxBody(contents ...linebot.FlexComponent) *linebot.BoxComponent {
@@ -68,6 +81,18 @@ func bubbleTextTitle(txt string) *linebot.TextComponent {
         Size:   linebot.FlexTextSizeTypeXl,
         Weight: linebot.FlexTextWeightTypeBold,
         Color:  colorSecondary,
+    }
+}
+
+func bubbleTextPromo(txt string, flex int) *linebot.TextComponent {
+    return &linebot.TextComponent{
+        Type:   linebot.FlexComponentTypeText,
+        Text:   txt,
+        Size:   linebot.FlexTextSizeTypeMd,
+        Weight: linebot.FlexTextWeightTypeBold,
+        Color:  colorSpecial,
+        Wrap:   true,
+        Flex:   linebot.IntPtr(flex),
     }
 }
 
