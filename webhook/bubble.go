@@ -32,10 +32,18 @@ func bubbleBoxHorizontal(contents ...linebot.FlexComponent) *linebot.BoxComponen
     }
 }
 
+func bubbleBoxBody(contents ...linebot.FlexComponent) *linebot.BoxComponent {
+    body := *bubbleBoxVertical()
+    body.Spacing = linebot.FlexComponentSpacingTypeMd
+    return &body
+}
+
 func bubbleButton(action linebot.TemplateAction) *linebot.ButtonComponent {
     return &linebot.ButtonComponent{
         Type:   linebot.FlexComponentTypeButton,
         Action: action,
+        Color:  colorSecondary,
+        Style:  linebot.FlexButtonStyleTypeSecondary,
     }
 }
 
@@ -103,5 +111,6 @@ func bubbleSeparator() *linebot.SeparatorComponent {
 func bubbleSpacer() *linebot.SpacerComponent {
     return &linebot.SpacerComponent{
         Type:   linebot.FlexComponentTypeSpacer,
+        Size:   linebot.FlexSpacerSizeTypeXxl,
     }
 }

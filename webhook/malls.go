@@ -21,12 +21,13 @@ func (m *Mall) createBubble() linebot.FlexContainer {
         bubbleTextBodyRegular(m.Description, 0),
     }
     footer := []linebot.FlexComponent{
+        bubbleSpacer(),
         bubbleButton(postback),
     }
     return &linebot.BubbleContainer{
         Type:   linebot.FlexContainerTypeBubble,
         Size:   linebot.FlexBubbleSizeTypeMega,
-        Body:   bubbleBoxVertical(body...),
+        Body:   bubbleBoxBody(body...),
         Footer: bubbleBoxHorizontal(footer...),
         Styles: bubbleStyleDefault(),
     }
