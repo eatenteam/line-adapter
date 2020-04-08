@@ -24,7 +24,7 @@ func (s *Shop) createBubble(txt string) *linebot.BubbleContainer {
         DisplayText:    s.Brand,
     }
     header := []linebot.FlexComponent{
-        bubbleTextHeader(txt),
+        bubbleTextHeader("@" + txt),
     }
     body := []linebot.FlexComponent{
         bubbleTextTitle("🍰 " + s.Brand),
