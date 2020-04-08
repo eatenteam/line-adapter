@@ -3,9 +3,9 @@ package main
 import "github.com/line/line-bot-sdk-go/linebot"
 
 const (
-    colorPrimary    = "#392F5A"
-    colorSecondary  = "#FFF8F0"
-    colorSpecial    = "#ED2939"
+    colorPrimary    = "#8A0000"
+    colorSecondary  = "#000000"
+    colorSpecial    = "#FF9E79"
 )
 
 func bubbleStyleDefault() *linebot.BubbleStyle {
