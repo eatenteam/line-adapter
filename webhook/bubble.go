@@ -4,7 +4,7 @@ import "github.com/line/line-bot-sdk-go/linebot"
 
 const (
     colorPrimary    = "#8A0000"
-    colorSecondary  = "#000000"
+    colorSecondary  = "#FFFFFF"
     colorSpecial    = "#FF9E79"
 )
 
