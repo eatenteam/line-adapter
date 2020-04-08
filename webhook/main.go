@@ -8,7 +8,9 @@ import (
 )
 
 type Server struct {
-    bot *linebot.Client
+    http    *http.Client
+    bot     *linebot.Client
+    storage string
 }
 
 func main() {
@@ -16,11 +18,12 @@ func main() {
     if err := c.load(); err != nil {
         log.Fatalln("Loading Environemnt Error: ", err)
     }
-    bot, err := connectLine(c.LineToken, c.LineSecret)
+    client := createHTTPClient()
+    bot, err := createBot(c.LineToken, c.LineSecret)
     if err != nil {
         log.Fatalln("LINEBot Error: ", err)
     }
-    s := &Server{bot}
+    s := &Server{client, bot, c.StorageUrl}
     mux := http.NewServeMux()
     mux.HandleFunc("/webhook", s.onlyPost(s.handleWebhooks()))
     mux.HandleFunc("/webhook/", s.onlyPost(s.handleWebhooks()))
@@ -30,7 +33,7 @@ func main() {
     log.Fatalln(http.ListenAndServe(":" + c.Port, mux))
 }
 
-func connectLine(token, secret string) (*linebot.Client, error) {
+func createBot(token, secret string) (*linebot.Client, error) {
     client := &http.Client{}
     log.Println("🔥  Bootstrapping LINEBot...")
     bot, err := linebot.New(secret, token, linebot.WithHTTPClient(client))
@@ -38,4 +41,9 @@ func connectLine(token, secret string) (*linebot.Client, error) {
         log.Println("✅  Successfully bootstrapping LINEBot")
     }
     return bot, err
+}
+
+func createHTTPClient() *http.Client {
+    log.Println("🔥  Bootstrapping HTTP Client...")
+    return &http.Client{}
 }

@@ -6,6 +6,7 @@ type Config struct {
     Port        string  `env:"PORT,default=80"`
     LineSecret  string  `env:"LINE_SECRET,required"`
     LineToken   string  `env:"LINE_TOKEN,required"`
+    StorageUrl  string  `env:"STORAGE_URL,required"`
 }
 
 func (c *Config) load() error {

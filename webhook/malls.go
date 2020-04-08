@@ -9,7 +9,7 @@ type Mall struct {
     Shops       []string    `json:"shops"`
 }
 
-func (m *Mall) createBubble() linebot.FlexContainer {
+func (m *Mall) createBubble() *linebot.BubbleContainer {
     postback := &linebot.PostbackAction{
         Label:          "See Restuarants",
         Data:           "mall=" + m.Id,
