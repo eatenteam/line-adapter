@@ -39,7 +39,7 @@ func bubbleBoxBody(contents ...linebot.FlexComponent) *linebot.BoxComponent {
 }
 
 func bubbleBoxFooter(contents ...linebot.FlexComponent) *linebot.BoxComponent {
-    footer := *bubbleBoxVetfical(contents...)
+    footer := *bubbleBoxVertical(contents...)
     return &footer
 }
 
