@@ -3,7 +3,7 @@ Here, we are implementing LINEBot to interact with customers/users through autom
 
 ## LINE Action Usage
 
-**NOTE:** Numbering here corresponds to the UI/UX screen number in the outline document by `bhira@eaten.team`.
+**NOTE:** Deprecated
 
 | Number | Action | Type | Data |
 | ------ | ------ | ---- | ---- |
