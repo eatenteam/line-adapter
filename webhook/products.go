@@ -1,6 +1,10 @@
 package main
 
-import "github.com/line/line-bot-sdk-go/linebot"
+import (
+    "strconv"
+
+    "github.com/line/line-bot-sdk-go/linebot"
+)
 
 type Product struct {
     Id              string  `json:"id"`
@@ -23,11 +27,11 @@ func (p *Product) createBubble(txt string) *linebot.BubbleContainer {
         bubbleSeparator(),
         bubbleBoxBaseline([]linebot.FlexComponent{
             bubbleTextBodyBold("Original:", 2),
-            bubbleTextBodyRegular(string(p.OriginalPrice), 4),
+            bubbleTextBodyRegular(strconv.Itoa(p.OriginalPrice), 4),
         }...),
         bubbleBoxBaseline([]linebot.FlexComponent{
             bubbleTextBodyBold("Now:", 2),
-            bubbleTextBodyRegular(string(p.PromotionPrice), 4),
+            bubbleTextBodyRegular(strconv.Itoa(p.PromotionPrice), 4),
         }...),
     }
     footer := []linebot.FlexComponent{
