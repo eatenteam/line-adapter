@@ -33,7 +33,7 @@ func bubbleBoxHorizontal(contents ...linebot.FlexComponent) *linebot.BoxComponen
 }
 
 func bubbleBoxBody(contents ...linebot.FlexComponent) *linebot.BoxComponent {
-    body := *bubbleBoxVertical()
+    body := *bubbleBoxVertical(contents...)
     body.Spacing = linebot.FlexComponentSpacingTypeMd
     return &body
 }
