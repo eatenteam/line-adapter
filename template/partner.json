@@ -1,0 +1,39 @@
+{
+  "type": "flex",
+  "altText": "Become partner for various benefits!",
+  "contents": {
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "hero": {
+          "type": "image",
+          "url": "https://sgp1.digitaloceanspaces.com/winnaries/eaten/bubble-shop.png",
+          "size": "full",
+          "aspectRatio": "3:4",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": "https://forms.gle/Sj1irUkJAykef5sv9"
+          }
+        }
+      },
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "hero": {
+          "type": "image",
+          "url": "https://sgp1.digitaloceanspaces.com/winnaries/eaten/bubble-delivery.png",
+          "size": "full",
+          "aspectRatio": "3:4",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": "https://forms.gle/B5eyy38J7Gga7x4Q8"
+          }
+        }
+      }
+    ]
+  }
+}

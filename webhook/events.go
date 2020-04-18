@@ -15,9 +15,5 @@ func (s *Server) routeEvents(e *linebot.Event) {
                 log.Print(err)
             }
         }
-    case linebot.EventTypePostback:
-        if err := s.handlePostback(e.Postback, e.ReplyToken, e.Source); err != nil {
-            log.Print(err)
-        }
     }
 }
